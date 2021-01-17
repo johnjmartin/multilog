@@ -24,4 +24,7 @@ const (
 
 	// TRACE Designates finer-grained informational events than the DEBUG.
 	TRACE
+
+	// OFF in the context of mutilog would mean no output at all, unsupported operation
+	OFF
 )

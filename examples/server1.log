@@ -1,0 +1,4 @@
+[02/28/2020 5:20:55.17][info][server1] Opening database “my_db7” for write.
+[02/28/2020 5:20:56.45][warn][server1] Database “my_db7” did not exist, creating...
+[02/28/2020 5:20:57.35][error][server1] Could not create database “my_db7”. Database server rejected request.
+[02/28/2020 5:20:57.45][fatal][server1] Unable to write to database “my_db7”. Exiting.
