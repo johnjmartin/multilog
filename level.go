@@ -7,6 +7,9 @@ const (
 	// ALL All levels including custom levels.
 	ALL Level = iota
 
+	// TRACE Designates finer-grained informational events than the DEBUG.
+	TRACE
+
 	// DEBUG Designates fine-grained informational events that are most useful to debug an application.
 	DEBUG
 
@@ -21,9 +24,6 @@ const (
 
 	// FATAL Designates very severe error events that will presumably lead the application to abort.
 	FATAL
-
-	// TRACE Designates finer-grained informational events than the DEBUG.
-	TRACE
 
 	// OFF in the context of mutilog would mean no output at all, unsupported operation
 	OFF
