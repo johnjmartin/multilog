@@ -24,7 +24,7 @@ func newLogLineWithFilters(line string, start time.Time, minSeverity Level) logL
 	included := true
 
 	submatchall := re.FindAllString(line, -1)
-	if len(submatchall) < 3 {
+	if len(submatchall) < 2 {
 		log.Warnf("Unsupported log format, log: %s", line)
 		return logLine{included: false}
 	}
@@ -34,6 +34,9 @@ func newLogLineWithFilters(line string, start time.Time, minSeverity Level) logL
 	}
 	ts, err := tsFromLog(submatchall[0])
 	if err != nil {
+		included = false
+	}
+	if ts.Before(start) {
 		included = false
 	}
 
